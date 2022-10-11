@@ -19,7 +19,7 @@
                 {
                     Id = instructorId
                 }
-            }
+            };
             return true;
         }
     }
