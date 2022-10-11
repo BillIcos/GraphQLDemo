@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5F4ZRzZ9NNwgIpZs0misvnejQAmq/o3mO9MGI3o/m9Eve87E9bmdSThHXh5rSuPz4Jp+BaBD5FAqbELNW/Z5+Q==",
+  "dgSpecHash": "z1mrdlmh89was0FtPaMeYhhFFk5zitL/vEM1I3ykz5qowNXqixHWjHkbnxOmxnd6gT8k6djZwGLQs4GuuoxLQQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\BillY\\source\\repos\\GraphQLDemo\\GraphQLDemo.API\\GraphQLDemo.API.csproj",
+  "projectFilePath": "C:\\Users\\BillY\\source\\repos\\GraphQLDemoGithub\\GraphQLDemo.API\\GraphQLDemo.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BillY\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\BillY\\.nuget\\packages\\greendonut\\12.15.0\\greendonut.12.15.0.nupkg.sha512",

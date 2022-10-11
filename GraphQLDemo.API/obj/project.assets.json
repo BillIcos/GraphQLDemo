@@ -1318,11 +1318,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BillY\\source\\repos\\GraphQLDemo\\GraphQLDemo.API\\GraphQLDemo.API.csproj",
+      "projectUniqueName": "C:\\Users\\BillY\\source\\repos\\GraphQLDemoGithub\\GraphQLDemo.API\\GraphQLDemo.API.csproj",
       "projectName": "GraphQLDemo.API",
-      "projectPath": "C:\\Users\\BillY\\source\\repos\\GraphQLDemo\\GraphQLDemo.API\\GraphQLDemo.API.csproj",
+      "projectPath": "C:\\Users\\BillY\\source\\repos\\GraphQLDemoGithub\\GraphQLDemo.API\\GraphQLDemo.API.csproj",
       "packagesPath": "C:\\Users\\BillY\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BillY\\source\\repos\\GraphQLDemo\\GraphQLDemo.API\\obj\\",
+      "outputPath": "C:\\Users\\BillY\\source\\repos\\GraphQLDemoGithub\\GraphQLDemo.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\BillY\\AppData\\Roaming\\NuGet\\NuGet.Config",
