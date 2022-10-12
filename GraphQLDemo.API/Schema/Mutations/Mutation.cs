@@ -10,20 +10,20 @@ namespace GraphQLDemo.API.Schema.Mutations
         {
             _courses = new List<CourseResult>();
         }
-        public CourseResult CreateCourse(string name, Subject subject, Guid instructorId)
+        public CourseResult CreateCourse(CourseInputType courseInput)
         {
             CourseResult courseType = new CourseResult()
             {
                 Id = Guid.NewGuid(),
-                Name = name,
-                Subject = subject,
-                InstructorId = instructorId
+                Name = courseInput.Name,
+                Subject = courseInput.Subject,
+                InstructorId = courseInput.InstructorId
             };
             _courses.Add(courseType);
             return courseType;
         }
 
-        public CourseResult UpdateCourse(Guid id, string name, Subject subject, Guid instructorId)
+        public CourseResult UpdateCourse(Guid id, CourseInputType courseInput)
         {
             CourseResult course = _courses.Find(x => x.Id == id);
             if(course == null)
@@ -31,9 +31,9 @@ namespace GraphQLDemo.API.Schema.Mutations
                 throw new GraphQLException(new Error("Course not found", "1001"));
                 //throw new Exception("Course not found");
             };
-            course.Name = name;
-            course.Subject = subject;
-            course.InstructorId = instructorId;            
+            course.Name = courseInput.Name;
+            course.Subject = courseInput.Subject;
+            course.InstructorId = courseInput.InstructorId;            
 
             return course;
         }
