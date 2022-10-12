@@ -1,4 +1,6 @@
 ﻿using GraphQLDemo.API.Schema.Queries;
+using GraphQLDemo.API.Schema.Subscriptions;
+using HotChocolate.Subscriptions;
 
 namespace GraphQLDemo.API.Schema.Mutations
 {
@@ -10,17 +12,20 @@ namespace GraphQLDemo.API.Schema.Mutations
         {
             _courses = new List<CourseResult>();
         }
-        public CourseResult CreateCourse(CourseInputType courseInput)
+        public async Task<CourseResult> CreateCourse(CourseInputType courseInput)
+            //, [Service] ITopicEventSender topicEventSender)
         {
-            CourseResult courseType = new CourseResult()
+            CourseResult course = new CourseResult()
             {
                 Id = Guid.NewGuid(),
                 Name = courseInput.Name,
                 Subject = courseInput.Subject,
                 InstructorId = courseInput.InstructorId
             };
-            _courses.Add(courseType);
-            return courseType;
+            _courses.Add(course);
+            //await topicEventSender.SendAsync(nameof(Subscription.CourseCreated), course);
+
+            return course;
         }
 
         public CourseResult UpdateCourse(Guid id, CourseInputType courseInput)

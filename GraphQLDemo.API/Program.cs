@@ -5,18 +5,21 @@ using GraphQLDemo.API.Schema.Subscriptions;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddGraphQLServer()
     .AddQueryType<Query>()
-    .AddMutationType<Mutation>()
-    .AddSubscriptionType<Subscription>();
+    .AddMutationType<Mutation>();
+    //.AddSubscriptionType<Subscription>();
 
 IServiceCollection services = new ServiceCollection();
-services.AddInMemorySubscriptions();
+//services.AddInMemorySubscriptions();
 
 var app = builder.Build();
 
 app.UseRouting();
 
-app.UseWebSockets();
+//app.UseWebSockets();
 
-app.MapGraphQL();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapGraphQL();
+});
 
 app.Run();
